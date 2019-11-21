@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
 	const environment = env || 'production';
@@ -22,13 +23,18 @@ module.exports = (env) => {
             		{ loader: 'style-loader'},
             		{
                 		loader: 'css-loader',
-                		options: {
-                    		modules: true
-                		}		
-            		}
-        		]
-    		}
-		]
-	},
-}
+                			options: {
+                    			modules: true
+                			}		
+            			}
+        			]
+    			}
+			]
+		},
+		plugins: [new HtmlWebpackPlugin({
+			template: 'src/index.html',
+			filename: 'index.html',
+			inject: 'body'
+		})]
+	}
 };
