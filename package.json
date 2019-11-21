@@ -1,5 +1,5 @@
 {
-  "name": "20.5_ChangeConfiguration",
+  "name": "20.6_Plugins",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -28,13 +28,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielminschinski/20.5_ChangeConfiguration.git"
+    "url": "git+https://github.com/danielminschinski/20.6_Plugins.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danielminschinski/20.5_ChangeConfiguration/issues"
+    "url": "https://github.com/danielminschinski/20.6_Plugins/issues"
   },
-  "homepage": "https://github.com/danielminschinski/20.5_ChangeConfiguration#readme"
+  "homepage": "https://github.com/danielminschinski/20.6_Plugins#readme"
 }
