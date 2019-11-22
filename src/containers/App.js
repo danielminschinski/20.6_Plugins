@@ -10,22 +10,17 @@ class App extends React.Component {
             title: 'Webpack - nauka',
             data: [
                 {
-                    text: "One",
-                    id: 1234
+                    text: 'clean room',
+                    id: 1
                 },
                 {
-                    text: "Two",
-                    id: 5678
+                    text: "wash the dishes",
+                    id: 2
                 },
                 {
-                    text: "Three",
-                    id: 1234
-                },
-                {
-                    text: "Four",
-                    id: 5678
-                }]
-            
+                    text: "feed my cat",
+                    id: 3
+                }]   
         };
     }
     addTodo(val){
