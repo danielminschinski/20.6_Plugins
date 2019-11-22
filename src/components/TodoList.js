@@ -1,17 +1,34 @@
 import React from 'react';
-import Todo from '.Todo';
-import style from './TodoList.css';
 
-const TodoList = props =>
-	<div>
-		{props.data.map(todo =>
-			<Todo 
-				key={todo.id}
-				text={todo.text}
-				id={todo.id}
-				removeTodo={props.removeTodo}
-			/>) 
-		}
-	</div>
+class TodoList extends React.Component{
+	constructor(props){
+		super(props);
+		this.passClickedItem = this.passClickedItem.bind(this); 
+	}
+	passClickedItem(clickedItem){
+		this.props.onClick(clickedItem);
+		console.log('passClickedItem - clickedItem: ', clickedItem)
+	}
+	render(){
+		const singleTaskNames = this.props.tasks.map(singleTask => {
+			console.log('render: singleTask in map function: ', singleTask)
+			return (
+				<li key={singleTask.id} onClick={() => this.passClickedItem(singleTask.id)}>
+						{singleTask.text}
+				</li>
+			)
+		});
+		console.log('render: singleTaskNames: ', singleTaskNames)
+		return(
+			<div>
+				Task:
+					<ul>
+						{singleTaskNames}
+					</ul>
+			</div>
+		)
+	}
+}
+
 export default TodoList;
 
