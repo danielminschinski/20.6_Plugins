@@ -2,6 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
+import TodoList from '../components/TodoList';
 
 class App extends React.Component {
     constructor(props){
@@ -10,19 +11,22 @@ class App extends React.Component {
             title: 'Webpack - nauka',
             data: [
                 {
-                    text: 'clean room',
-                    id: 1
+                    id: 1,
+                    text: 'clean room'    
                 },
                 {
-                    text: "wash the dishes",
-                    id: 2
+                    id: 2,
+                    text: "wash the dishes"   
                 },
                 {
-                    text: "feed my cat",
-                    id: 3
-                }]   
+                    id: 3,
+                    text: "feed my cat"  
+                }
+            ]   
         };
+        this.removeTodo = this.removeTodo.bind(this);
     }
+    
     addTodo(val){
         const todo = {
             text: val,
@@ -39,6 +43,7 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 <Title title={this.state.title} numberOfTask={this.state.data.length} />
+                <TodoList tasks={this.state.data} onClick={this.removeTodo.bind(this)}/>
             </div>
         );
     }
