@@ -8,6 +8,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            title: 'Webpack - nauka',
             data: [{
                 id: 1,
                     text: 'clean room'
@@ -17,8 +18,7 @@ class App extends React.Component {
                 }, {
                 id: 3,
                     text: 'feed my cat'
-                }],
-            title: 'Webpack loaders training'
+                }]  
         };
         this.removeTodo = this.removeTodo.bind(this);
     }
